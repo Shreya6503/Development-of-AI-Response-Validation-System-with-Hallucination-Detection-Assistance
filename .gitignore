@@ -1,0 +1,17 @@
+
+# Secret environment settings
+.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.venv/
+
+# Streamlit settings
+.streamlit/secrets.toml
+
+# Local database files
+*.db
