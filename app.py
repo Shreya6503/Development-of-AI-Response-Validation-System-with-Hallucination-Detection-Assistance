@@ -7,12 +7,23 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("AI Response Validation System")
-st.subheader("With Hallucination Detection Assistance")
+# Main application page
+def home():
+    st.title("AI Response Validation System")
+    st.subheader("With Hallucination Detection Assistance")
 
-st.write(
-    "Welcome! This application will help evaluate AI-generated "
-    "responses for factual accuracy, relevance, and hallucinations."
-)
+    st.write(
+        "Welcome! This application will help evaluate AI-generated "
+        "responses for factual accuracy, relevance, and hallucinations."
+    )
 
-st.info("Our application setup is in progress.")
+    st.info("Please login or register to continue.")
+
+# Navigation pages
+pg = st.navigation([
+    st.Page(home, title="Home", icon="🏠", default=True),
+    st.Page("pages/login.py", title="Login", icon="🔐"),
+    st.Page("pages/register.py", title="Register", icon="📝"),
+])
+
+pg.run()
